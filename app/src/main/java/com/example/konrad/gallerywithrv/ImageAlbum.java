@@ -8,18 +8,19 @@ public class ImageAlbum {
 
 
     public static final ImageAlbum[] musicAlbums = {
-            new ImageAlbum("Album 1", R.drawable.cover1),
-            new ImageAlbum("Album 2", R.drawable.cover2),
-            new ImageAlbum("Album 3", R.drawable.cover3),
-            new ImageAlbum("Album 4", R.drawable.cover4),
-            new ImageAlbum("Album 5", R.drawable.cover5),
-            new ImageAlbum("Album 6", R.drawable.cover6),
-            new ImageAlbum("Album 7", R.drawable.cover7),
-            new ImageAlbum("Album 8", R.drawable.cover8),
-            new ImageAlbum("Album 9", R.drawable.cover9),
-            new ImageAlbum("Album 10", R.drawable.cover10),
-            new ImageAlbum("Album 11", R.drawable.cover11),
-            new ImageAlbum("Album 12", R.drawable.cover12)
+            new ImageAlbum("Photo 1", R.drawable.image1),
+            new ImageAlbum("Photo 2", R.drawable.image2),
+            new ImageAlbum("Photo 3", R.drawable.image3),
+            new ImageAlbum("Photo 4", R.drawable.image4),
+            new ImageAlbum("Photo 5", R.drawable.image5),
+            new ImageAlbum("Photo 6", R.drawable.image6),
+            new ImageAlbum("Photo 7", R.drawable.image7),
+            new ImageAlbum("Photo 8", R.drawable.image8),
+            new ImageAlbum("Photo 9", R.drawable.image9),
+            new ImageAlbum("Photo 10", R.drawable.image10),
+            new ImageAlbum("Photo 11", R.drawable.image11),
+            new ImageAlbum("Photo 12", R.drawable.image12)
+
     };
 
 

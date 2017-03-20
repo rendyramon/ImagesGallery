@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,13 +29,15 @@ public class AlbumDetailActivity extends AppCompatActivity implements GestureDet
     private int albumNo;
     private int albumLength;
 
+//    large heap, hardwareacceleration
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_detail);
 
         AlphaAnimation animationAlpha = new AlphaAnimation(0.2f, 1.0f);
-        animationAlpha.setDuration(500);
+        animationAlpha.setDuration(700);
 
         albumLength = ImageAlbum.musicAlbums.length;
         Log.d(DEBUG_TAG, "oalbumLen: " + albumLength);
@@ -54,15 +57,15 @@ public class AlbumDetailActivity extends AppCompatActivity implements GestureDet
     }
 
     public void onSwipeRight() {
-        if (albumNo <= albumLength - 2) {
-            albumNo++;
+        if (albumNo >= 1) {
+            albumNo--;
             updateScreen();
         }
     }
 
     public void onSwipeLeft() {
-        if (albumNo >= 1) {
-            albumNo--;
+        if (albumNo <= albumLength - 2) {
+            albumNo++;
             updateScreen();
         }
     }
@@ -73,9 +76,11 @@ public class AlbumDetailActivity extends AppCompatActivity implements GestureDet
 
         albumImage = ImageAlbum.musicAlbums[albumNo].getImageResourceId();
         AlphaAnimation animationAlpha = new AlphaAnimation(0.2f, 1.0f);
-        animationAlpha.setDuration(500);
-        imageView.setAnimation(animationAlpha);
-        imageView.setImageDrawable(getResources().getDrawable(albumImage));
+        animationAlpha.setDuration(700);
+
+//        imageView.setAnimation(animationAlpha);
+//        imageView.setImageDrawable(getResources().getDrawable(albumImage));
+        Glide.with(this).load(albumImage).animate(animationAlpha).into(imageView);
     }
 
 
@@ -131,6 +136,15 @@ public class AlbumDetailActivity extends AppCompatActivity implements GestureDet
     @Override
     public boolean onSingleTapUp(MotionEvent event) {
         return true;
+    }
+
+    public void onBackAction(View view) {
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }
 

@@ -20,7 +20,6 @@ public class ImageAlbum {
             new ImageAlbum("Photo 10", R.drawable.image10),
             new ImageAlbum("Photo 11", R.drawable.image11),
             new ImageAlbum("Photo 12", R.drawable.image12)
-
     };
 
 

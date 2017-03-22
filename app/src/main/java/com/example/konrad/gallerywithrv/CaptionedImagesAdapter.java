@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
@@ -42,7 +43,8 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
         CardView cardView = holder.cardView;
         ImageView imageView = (ImageView) cardView.findViewById(R.id.info_image);
 
-        Glide.with(mContext).load(imageIds[position]).into(imageView);
+        Glide.with(mContext).load(imageIds[position]).thumbnail(0.5f).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
+
 
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,41 +6,29 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:paddingBottom="15dp"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
     android:paddingTop="15dp"
     tools:context="com.example.konrad.gallerywithrv.AlbumDetailActivity">
 
-    <ImageView
-        android:id="@+id/album_image"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/album_detail_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scrollbars="vertical"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="30dp"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/album_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/album_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="5dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
 
     <Button
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="17dp"
         android:onClick="onBackAction"
+        android:text="BACK"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="37dp"
-        android:text="BACK" />
+        android:layout_marginBottom="12dp" />
 
 
 </RelativeLayout>

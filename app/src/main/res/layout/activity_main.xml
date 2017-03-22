@@ -10,8 +10,6 @@
         android:id="@+id/album_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="25dp"
-        android:scrollbars="vertical">
+        android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
 
-    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

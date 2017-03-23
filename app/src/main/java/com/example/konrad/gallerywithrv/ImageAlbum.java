@@ -10,7 +10,7 @@ public class ImageAlbum {
     public static final ImageAlbum[] musicAlbums = {
             new ImageAlbum("Photo 1", R.drawable.image1),
             new ImageAlbum("Photo 2", R.drawable.image2),
-            new ImageAlbum("Photo 3", R.drawable.image3),
+            new ImageAlbum("Photo 3", R.drawable.image12),
             new ImageAlbum("Photo 4", R.drawable.image4),
             new ImageAlbum("Photo 5", R.drawable.image5),
             new ImageAlbum("Photo 6", R.drawable.image6),
@@ -19,7 +19,7 @@ public class ImageAlbum {
             new ImageAlbum("Photo 9", R.drawable.image9),
             new ImageAlbum("Photo 10", R.drawable.image10),
             new ImageAlbum("Photo 11", R.drawable.image11),
-            new ImageAlbum("Photo 12", R.drawable.image12)
+            new ImageAlbum("Photo 12", R.drawable.image3)
     };
 
 

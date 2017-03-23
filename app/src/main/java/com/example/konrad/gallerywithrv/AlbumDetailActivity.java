@@ -12,8 +12,6 @@ public class AlbumDetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_ALBUMNO = "albumNo";
 
-//    large heap, hardwareacceleration
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +42,7 @@ public class AlbumDetailActivity extends AppCompatActivity {
         albumRecycler.setLayoutManager(linearLayoutManager);
 
         albumRecycler.smoothScrollToPosition(currentPosition);
+
     }
 
     public void onBackAction(View view) {

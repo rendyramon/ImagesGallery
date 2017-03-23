@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
+import android.view.Gravity;
+
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
         albumRecycler.setLayoutManager(gridLayoutManager);
 
-//        albumRecycler.smoothScrollToPosition(adapter.getItemCount());
-
-
-
+        SnapHelper snapHelperStart = new GravitySnapHelper(Gravity.TOP);
+        snapHelperStart.attachToRecyclerView(albumRecycler);
     }
 }

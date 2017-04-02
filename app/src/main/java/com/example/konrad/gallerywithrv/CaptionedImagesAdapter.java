@@ -51,7 +51,6 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
 
         Glide.with(mContext).load(imageIds[position]).thumbnail(0.5f).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView);
 
-
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

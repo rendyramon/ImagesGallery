@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int[] albumImages = new int[ImageAlbum.musicAlbums.length];
+        int[] albumImages = new int[ImageAlbum.images.length];
         for (int i = 0; i < albumImages.length; i++) {
-            albumImages[i] = ImageAlbum.musicAlbums[i].getImageResourceId();
+            albumImages[i] = ImageAlbum.images[i].getImageResourceId();
         }
 
         RecyclerView albumRecycler = (RecyclerView) findViewById(R.id.album_recycler);

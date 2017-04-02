@@ -7,7 +7,7 @@ public class ImageAlbum {
     private int imageResourceId;
 
 
-    public static final ImageAlbum[] musicAlbums = {
+    public static final ImageAlbum[] images = {
             new ImageAlbum("Photo 1", R.drawable.image1),
             new ImageAlbum("Photo 2", R.drawable.image2),
             new ImageAlbum("Photo 3", R.drawable.image12),
